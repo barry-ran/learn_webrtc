@@ -235,19 +235,19 @@ jobs:
           rm -rf out
 
       - name: Download library artifact - Debug
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: ${{ matrix.target_os }}/lib/${{ matrix.arch }}/Debug
           name: ${{ env.TEMP_ARTIFACT }}-debug
 
       - name: Download library artifact - Release
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: ${{ matrix.target_os }}/lib/${{ matrix.arch }}/Release
           name: ${{ env.TEMP_ARTIFACT }}-release
 
       - name: Download includes
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           path: ${{ matrix.target_os }}
           name: ${{ env.TEMP_ARTIFACT }}-headers
